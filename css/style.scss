@@ -98,6 +98,25 @@ body {
 .logo {
   width: 3rem;
 }
+#triangleOne {
+  transition: 200ms ease-in;
+}
+#triangleTwo {
+  transition: 200ms ease-in;
+}
+#triangleContainer {
+  cursor: default;
+}
+#triangleContainer:hover > #triangleTwo {
+  fill: #ff8b96;
+  transform: translate(-2px, 2px);
+  transition: 200ms ease-in;
+}
+#triangleContainer:hover > #triangleOne {
+  fill: #ff6c7a;
+  transform: translate(2px, -2px);
+  transition: 200ms ease-in;
+}
 .margin-container {
   margin: 0.75rem 8.75rem;
 }
@@ -154,6 +173,20 @@ body {
       right: -2rem;
       top: -1rem;
       z-index: -1;
+      animation: float 6s infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: scaleX(1) scaleY(1);
+      }
+
+      50% {
+        transform: scaleX(1.05) scaleY(1.05);
+      }
+
+      100% {
+        transform: scaleX(1) scaleY(1);
+      }
     }
   }
 
