@@ -263,7 +263,6 @@ body {
     rgba(23, 42, 69, 1) 0%,
     rgba(30, 53, 84, 1) 100%
   );
-  -webkit-backface-visibility: hidden;
 }
 .aboutPath {
   background-image: url(/img/rect.svg);
@@ -307,5 +306,27 @@ body {
     width: 10rem;
     height: 100%;
     border-radius: 2rem;
+  }
+}
+
+// ** My Work Section ** //
+.work {
+  background: rgb(23, 42, 69);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 42, 69, 1) 0%,
+    rgba(30, 53, 84, 1) 100%
+  );
+  padding: 0rem 16%;
+
+  &__title {
+    color: #f2fafa;
+    font-weight: $semi-bold;
+    line-height: 1;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    &_period {
+      color: #ff8b96;
+    }
   }
 }
