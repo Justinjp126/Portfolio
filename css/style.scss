@@ -118,7 +118,7 @@ body {
   transition: 200ms ease-in;
 }
 .margin-container {
-  margin: 0.75rem 8.75rem;
+  margin: 0.75rem 7rem;
 }
 .nav-link {
   color: $off-white;
@@ -147,7 +147,7 @@ body {
 
 // ** Hero Section ** //
 .hero {
-  margin: 2rem 5rem;
+  margin: 2rem 4rem;
   color: $off-white;
 
   &__title {
@@ -268,7 +268,7 @@ body {
   background-image: url(https://justinjp126.github.io/Portfolio/img/rect.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 6rem 16%;
+  padding: 6rem 15%;
 }
 .about {
   &__title {
@@ -284,7 +284,7 @@ body {
 
   &__paragraph {
     color: #275a7a;
-    font-weight: $regular;
+    font-weight: $light;
     line-height: 1.5;
     padding: 1rem 1.5rem 0 0;
     font-size: 0.9rem;
@@ -317,16 +317,75 @@ body {
     rgba(23, 42, 69, 1) 0%,
     rgba(30, 53, 84, 1) 100%
   );
-  padding: 0rem 16%;
+  padding: 0rem 8%;
 
   &__title {
     color: #f2fafa;
     font-weight: $semi-bold;
     line-height: 1;
     font-size: 2.5rem;
-    padding-top: 1.5rem;
+    padding: 3rem 0 2rem 8%;
     &_period {
       color: #ff8b96;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-weight: $semi-bold;
+    line-height: 1;
+    font-size: 1.1rem;
+  }
+
+  &__paragraph {
+    color: #f2fafa;
+    font-weight: $light;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  &__img {
+    &_nhd {
+      width: 90%;
+      border-radius: 1rem;
+      transform: scale(105%);
+      transition: 200ms ease;
+    }
+    &_nhd:hover,
+    &_nhd:focus {
+      transform: scale(100%);
+      transition: 200ms ease;
+    }
+    &_wiz {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    &_volta {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    &_nhmi {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    &_dmc {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+
+  &__year {
+    &_2018,
+    &_2019,
+    &_2020,
+    &_2021 {
+      position: absolute;
+      transform: rotate(90deg);
+      font-weight: $bold;
+      font-size: 8rem;
+      color: rgba(#457b9d, 0.2);
+      z-index: 1;
+      letter-spacing: 1px;
     }
   }
 }
