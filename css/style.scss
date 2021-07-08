@@ -87,7 +87,8 @@ body {
   overflow-x: hidden;
 }
 #upBtn {
-  display: none;
+  display: block;
+  opacity: 0;
   width: 2.5rem;
   height: 2.5rem;
   position: fixed;
@@ -106,10 +107,14 @@ body {
       var(--c1, $gradient-color-one)
     )
     var(--x, 0) / 200%;
-
-  cursor: pointer;
   border-radius: 100px;
-  transition: 500ms ease;
+  transition: 200ms ease;
+  cursor: default;
+}
+.btn_active {
+  cursor: pointer !important;
+  opacity: 1 !important;
+  transition: 200ms ease-in !important;
 }
 #upBtnArrow {
   width: 0.75rem;

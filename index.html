@@ -203,6 +203,8 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
     <script src="js/butter.js"></script>
     <script>
       butter.init({
@@ -211,38 +213,7 @@
         wrapperDamper: 0.06
       });
 
-      function scrollToElement(pageElement) {    
-          var positionX = 0,         
-              positionY = 0;    
-
-          while(pageElement != null){        
-              positionX += pageElement.offsetLeft;        
-              positionY += pageElement.offsetTop;        
-              pageElement = pageElement.offsetParent;        
-              window.scrollTo(positionX, positionY);    
-          }
-      }
-       
-      document.getElementById("about").addEventListener("click", () => {
-        scrollToElement(document.getElementById("aboutSection"))
-      }); 
-      document.getElementById("work").addEventListener("click", () => {
-        scrollToElement(document.getElementById("workSection"))
-      });
-
-            //Get the button:
-      mybutton = document.getElementById("upBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function() {scrollFunction()};
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
+      
     </script>
   </body>
 </html>
