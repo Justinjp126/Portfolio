@@ -20,16 +20,22 @@
   </head>
   <body>
     <main>
-      <div class="scroll-container">
+      <button onclick="topFunction()" id="upBtn">
+        <svg id="upBtnArrow" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="upBtnLine" d="M1 1L15 1" stroke="#1D3557" stroke-width="2" stroke-linecap="round"/>
+          <path id="upBtnLineTwo" d="M7 28C7 28.5523 7.44772 29 8 29C8.55228 29 9 28.5523 9 28L7 28ZM8.70711 6.29289C8.31658 5.90237 7.68342 5.90237 7.29289 6.29289L0.928933 12.6569C0.538409 13.0474 0.538409 13.6805 0.928933 14.0711C1.31946 14.4616 1.95262 14.4616 2.34315 14.0711L8 8.41421L13.6569 14.0711C14.0474 14.4616 14.6805 14.4616 15.0711 14.0711C15.4616 13.6805 15.4616 13.0474 15.0711 12.6569L8.70711 6.29289ZM9 28L9 7L7 7L7 28L9 28Z" fill="#1D3557"/>
+          </svg>
+        
+      </button> 
+      <div class="scroll-container" id="butter">
+        
         <div class="background-container">
           <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container margin-container">
-              <a class="navbar-brand" href="#">
                 <svg id="triangleContainer" class="logo" xmlns="http://www.w3.org/2000/svg" width="84" height="93" viewBox="0 0 84 93" fill="none">
                   <path id="triangleOne" d="M23.8419 36.6007C28.316 27.9528 40.684 27.9528 45.1581 36.6006L55.3167 56.2359C59.4491 64.2233 53.6517 73.75 44.6586 73.75H24.3414C15.3483 73.75 9.55093 64.2233 13.6833 56.2359L23.8419 36.6007Z" fill="#FF8B96"/>
                   <path id="triangleTwo" d="M38.8419 20.6007C43.316 11.9528 55.684 11.9528 60.1581 20.6006L70.3167 40.2359C74.4491 48.2233 68.6517 57.75 59.6586 57.75H39.3414C30.3483 57.75 24.5509 48.2233 28.6833 40.2359L38.8419 20.6007Z" fill="#FF6C7A"/>
                 </svg>
-              </a>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -47,12 +53,11 @@
               >
                 <ul class="navbar-nav end">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#about"
-                      >about</a
-                    >
+                    <span class="nav-link active" aria-current="page" id="about"
+                      >about</span>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#work">work</a>
+                    <span class="nav-link" id="work">work</span>
                   </li>
                 </ul>
               </div>
@@ -93,10 +98,10 @@
           </section>
         </div>
 
-        <section class="aboutColor">
+        <section class="aboutColor" id="aboutSection">
           <div class="aboutPath">
             <div class="container">
-              <div class="about" id="about">
+              <div class="about" >
                 <div class="row">
                   <div class="col-lg-8 col-sm-12 d-flex align-content-around flex-column">
                     <h2 class="about__title">
@@ -125,7 +130,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="workSection">
           <div class="work">
             <h2 class="work__title">
               my work<span class="work__title_period">.</span>
@@ -198,5 +203,46 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <script src="js/butter.js"></script>
+    <script>
+      butter.init({
+        wrapperId: 'butter',
+        cancelOnTouch: true,
+        wrapperDamper: 0.06
+      });
+
+      function scrollToElement(pageElement) {    
+          var positionX = 0,         
+              positionY = 0;    
+
+          while(pageElement != null){        
+              positionX += pageElement.offsetLeft;        
+              positionY += pageElement.offsetTop;        
+              pageElement = pageElement.offsetParent;        
+              window.scrollTo(positionX, positionY);    
+          }
+      }
+       
+      document.getElementById("about").addEventListener("click", () => {
+        scrollToElement(document.getElementById("aboutSection"))
+      }); 
+      document.getElementById("work").addEventListener("click", () => {
+        scrollToElement(document.getElementById("workSection"))
+      });
+
+            //Get the button:
+      mybutton = document.getElementById("upBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
