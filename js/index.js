@@ -1,6 +1,8 @@
-//Get the button:
+// ** Variables **//
 upBtn = $("#upBtn");
+upBtnArrow = $("#upBtnLineTwo");
 
+// ** Functions ** //
 function scrollToElement(pageElement) {
   var positionX = 0,
     positionY = 0;
@@ -25,11 +27,24 @@ function topFunction() {
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
 
+// ** Use ** //
+
 document.getElementById("about").addEventListener("click", () => {
   scrollToElement(document.getElementById("aboutSection"));
 });
 document.getElementById("work").addEventListener("click", () => {
   scrollToElement(document.getElementById("workSection"));
+});
+
+upBtn.mouseleave(function () {
+  upBtnArrow.bind("animationiteration webkitAnimationIteration", function () {
+    upBtnArrow.removeClass("floatArrow");
+    upBtnArrow.unbind("animationiteration webkitAnimationIteration");
+  });
+});
+
+upBtn.mouseenter(function () {
+  upBtnArrow.addClass("floatArrow");
 });
 
 // When the user scrolls down 20px from the top of the document, show the button

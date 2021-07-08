@@ -119,24 +119,28 @@ body {
 #upBtnArrow {
   width: 0.75rem;
 }
-#upBtn:hover > #upBtnArrow > #upBtnLineTwo {
+// #upBtn:hover > #upBtnArrow > #upBtnLineTwo {
+//   animation: arrowFloatIn 1s infinite;
+// }
+// #upBtnLineTwo {
+//   transform: translateY(0%);
+//   transition: 200ms ease;
+//   //animation: arrowFloatOut 1s;
+// }
+.floatArrow {
   animation: arrowFloatIn 1s infinite;
-}
-#upBtnLineTwo {
-  transform: translateY(0%);
-  animation: arrowFloatOut 1s;
 }
 @keyframes arrowFloatIn {
   0% {
-    transform: translateY(-5%);
-  }
-
-  50% {
     transform: translateY(0%);
   }
 
-  100% {
+  50% {
     transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }
 @keyframes arrowFloatOut {
