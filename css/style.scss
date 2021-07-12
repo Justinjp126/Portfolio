@@ -119,14 +119,7 @@ body {
 #upBtnArrow {
   width: 0.75rem;
 }
-// #upBtn:hover > #upBtnArrow > #upBtnLineTwo {
-//   animation: arrowFloatIn 1s infinite;
-// }
-// #upBtnLineTwo {
-//   transform: translateY(0%);
-//   transition: 200ms ease;
-//   //animation: arrowFloatOut 1s;
-// }
+
 .floatArrow {
   animation: arrowFloatIn 1s infinite;
 }
@@ -384,6 +377,18 @@ body {
   );
   padding: 0rem 8%;
 
+  .workContainer {
+    margin-bottom: 4rem;
+  }
+  .webmasterOneContainer {
+    padding-top: 1rem;
+  }
+  .webmasterTwoContainer {
+    padding-top: 0.7rem;
+  }
+  .workItems {
+    padding-left: 2rem;
+  }
   &__title {
     color: #f2fafa;
     font-weight: $semi-bold;
@@ -396,45 +401,73 @@ body {
   }
 
   &__subtitle {
+    position: relative;
+    z-index: 10;
     color: #fff;
     font-weight: $semi-bold;
     line-height: 1;
     font-size: 1.1rem;
+    &_sub {
+      padding-bottom: 0.5rem;
+    }
   }
 
-  &__paragraph {
+  &__paragraphR {
+    position: relative;
+    z-index: 10;
     color: #f2fafa;
     font-weight: $light;
     line-height: 1.5;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    max-width: 40ch;
+  }
+
+  &__paragraphL {
+    position: relative;
+    z-index: 10;
+    color: #f2fafa;
+    font-weight: $light;
+    line-height: 1.5;
+    font-size: 0.85rem;
+    max-width: 40ch;
+    padding-top: 0.5rem;
   }
 
   &__img {
     &_nhd {
-      width: 80%;
-      border-radius: 1rem;
-      transform: scale(105%);
-      transition: 200ms ease;
-    }
-    &_nhd:hover,
-    &_nhd:focus {
-      transform: scale(100%);
-      transition: 200ms ease;
-    }
-    &_wiz {
+      z-index: 10;
       width: 100%;
+      max-width: 20rem;
+      border-radius: 1rem;
+    }
+
+    &_wiz {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 20rem;
       border-radius: 1rem;
     }
     &_volta {
+      position: relative;
+      z-index: 10;
       width: 100%;
+      max-width: 20rem;
       border-radius: 1rem;
     }
     &_nhmi {
+      position: relative;
+      z-index: 10;
       width: 100%;
+      max-width: 13rem;
       border-radius: 1rem;
+      margin-left: 4rem;
     }
     &_dmc {
+      position: relative;
+      z-index: 10;
       width: 100%;
+      max-width: 23rem;
       border-radius: 1rem;
     }
   }
@@ -447,8 +480,8 @@ body {
       position: absolute;
       transform: rotate(90deg);
       font-weight: $bold;
-      font-size: 8rem;
-      color: rgba(#457b9d, 0.2);
+      font-size: 10rem;
+      color: rgba(#457b9d, 0.1);
       z-index: 1;
       letter-spacing: 1px;
     }
