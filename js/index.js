@@ -35,6 +35,9 @@ document.getElementById("about").addEventListener("click", () => {
 document.getElementById("work").addEventListener("click", () => {
   scrollToElement(document.getElementById("workSection"));
 });
+document.getElementById("portfolio").addEventListener("click", () => {
+  scrollToElement(document.getElementById("workSection"));
+});
 
 upBtn.mouseleave(function () {
   upBtnArrow.bind("animationiteration webkitAnimationIteration", function () {
