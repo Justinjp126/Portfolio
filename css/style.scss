@@ -368,6 +368,14 @@ body {
 }
 
 // ** My Work Section ** //
+#workSection {
+  background: rgb(23, 42, 69);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 42, 69, 1) 0%,
+    rgba(30, 53, 84, 1) 100%
+  );
+}
 .work {
   background: rgb(23, 42, 69);
   background: linear-gradient(
@@ -480,10 +488,33 @@ body {
       position: absolute;
       transform: rotate(90deg);
       font-weight: $bold;
-      font-size: 10rem;
+      font-size: 8rem;
       color: rgba(#457b9d, 0.1);
       z-index: 1;
       letter-spacing: 1px;
     }
+    &_2018,
+    &_2020 {
+      right: 0;
+    }
+    &_2019 {
+      left: 0;
+    }
+    &_2021 {
+      right: -3rem;
+      top: -5%;
+    }
   }
+}
+
+// ** Footer ** //
+.footer {
+  background: rgb(23, 42, 69);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 42, 69, 1) 0%,
+    rgba(30, 53, 84, 1) 100%
+  );
+  padding: 0rem 8%;
+  color: #fff;
 }
