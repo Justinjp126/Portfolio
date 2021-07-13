@@ -33,10 +33,20 @@ document.getElementById("about").addEventListener("click", () => {
   scrollToElement(document.getElementById("aboutSection"));
 });
 document.getElementById("work").addEventListener("click", () => {
+  console.log("YE");
   scrollToElement(document.getElementById("workSection"));
 });
 document.getElementById("portfolio").addEventListener("click", () => {
   scrollToElement(document.getElementById("workSection"));
+});
+document.getElementById("aboutme").addEventListener("click", () => {
+  scrollToElement(document.getElementById("aboutSection"));
+});
+document.getElementById("mywork").addEventListener("click", () => {
+  scrollToElement(document.getElementById("workSection"));
+});
+document.getElementById("home").addEventListener("click", () => {
+  topFunction();
 });
 
 upBtn.mouseleave(function () {

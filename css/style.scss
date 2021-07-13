@@ -515,6 +515,63 @@ body {
     rgba(23, 42, 69, 1) 0%,
     rgba(30, 53, 84, 1) 100%
   );
-  padding: 0rem 8%;
+  padding: 3rem 8%;
   color: #fff;
+
+  .contact {
+    padding-right: 1rem;
+    &__title {
+      padding-bottom: 0.25rem;
+      font-size: 1rem;
+      font-weight: $semi-bold;
+      span {
+        color: #ff8b96;
+      }
+    }
+    &__subTitle {
+      font-size: 0.9rem;
+      font-weight: $regular;
+      margin-bottom: 0.1rem;
+    }
+    &__text {
+      font-size: 0.9rem;
+      font-weight: $light;
+    }
+    &__link {
+      color: #ebe9e9;
+      font-size: 0.9rem;
+      font-weight: $light;
+      transition: 100ms ease color;
+    }
+    &__link:focus,
+    &__link:hover {
+      transition: 200ms ease color;
+      color: #ffffff;
+    }
+  }
+  .links {
+    padding-left: 1rem;
+    &__title {
+      padding-bottom: 0.25rem;
+      font-size: 1rem;
+      font-weight: $semi-bold;
+      span {
+        color: #ff8b96;
+      }
+    }
+    &__text {
+      margin-bottom: 0.75rem;
+      color: #ebe9e9;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: $light;
+      transition: 100ms ease color;
+    }
+    &__text:focus,
+    &__text:hover {
+      transition: 200ms ease color;
+      color: #ffffff;
+    }
+  }
 }
