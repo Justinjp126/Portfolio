@@ -272,7 +272,7 @@ body {
     font-weight: $light;
     max-width: 60ch;
     margin: 0.5rem 0 0 0;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   &__buttons {
@@ -354,7 +354,7 @@ body {
   background-image: url(https://justinjp126.github.io/Portfolio/img/rect.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 6rem 15%;
+  padding: 6.5rem 15% 6rem;
 }
 .about {
   &__title {
@@ -371,9 +371,9 @@ body {
   &__paragraph {
     color: #275a7a;
     font-weight: $light;
-    line-height: 1.5;
+    line-height: 1.6;
     padding: 1rem 1.5rem 0 0;
-    font-size: 0.9rem;
+    font-size: calc(max(0.9rem, 15px));
     max-width: 60ch;
   }
 
@@ -392,6 +392,20 @@ body {
     width: 10rem;
     height: 100%;
     border-radius: 2rem;
+  }
+}
+
+@media only screen and (max-width: $lg) {
+  .about {
+    .imgPadding {
+      padding: 1.5rem 0 0 0 !important;
+    }
+    &__paragraph {
+      padding: 1rem 0 0 0;
+    }
+  }
+  .aboutPath {
+    padding: 6.5rem 5% 6rem;
   }
 }
 
@@ -453,7 +467,7 @@ body {
     z-index: 10;
     color: #f2fafa;
     font-weight: $light;
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 0.85rem;
     max-width: 40ch;
   }
@@ -463,7 +477,7 @@ body {
     z-index: 10;
     color: #f2fafa;
     font-weight: $light;
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: 0.85rem;
     max-width: 40ch;
     padding-top: 0.5rem;
