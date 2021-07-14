@@ -33,6 +33,12 @@ $red: #e63946;
 $gradient-color-one: rgba(168, 218, 220, 1);
 $gradient-color-two: rgba(87, 179, 204, 1);
 
+// ** Sizes ** //
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+
 // ** Mix-Ins ** //
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -175,7 +181,7 @@ body {
   transition: 200ms ease-in;
 }
 .margin-container {
-  margin: 0.75rem 7rem;
+  margin: 0.75rem 4.5rem;
 }
 .nav-link {
   color: $off-white;
@@ -202,14 +208,24 @@ body {
   color: darken($off-white, 15%);
   transition: ease 150ms;
 }
+@media only screen and (max-width: $lg) {
+  .margin-container {
+    margin: 0.75rem 3rem;
+  }
+}
+@media only screen and (max-width: $md) {
+  .margin-container {
+    margin: 0.75rem 1rem;
+  }
+}
 
 // ** Hero Section ** //
 .hero {
-  margin: 2rem 4rem;
+  margin: 2rem 5rem;
   color: $off-white;
 
   &__title {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: $semi-bold;
     display: inline-block;
     z-index: 10;
@@ -309,6 +325,18 @@ body {
       background-color: $light-blue;
       color: $dark-blue;
       transition: all 200ms ease-in;
+    }
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .hero {
+    margin: 2rem 0.5rem;
+    &__title {
+      &_circle {
+        right: -1.5rem;
+        top: -1.5rem;
+      }
     }
   }
 }
