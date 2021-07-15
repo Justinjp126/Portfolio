@@ -358,7 +358,7 @@ body {
   background-image: url(https://justinjp126.github.io/Portfolio/img/rect.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 6.5rem 15% 6rem;
+  padding: 8.5rem 15% 6rem;
 }
 .about {
   &__title {
@@ -685,10 +685,31 @@ body {
       font-weight: $light;
       transition: 100ms ease color;
     }
+    #home {
+      margin-top: 0.5rem;
+    }
     &__text:focus,
     &__text:hover {
       transition: 200ms ease color;
       color: #ffffff;
+    }
+  }
+}
+
+@media only screen and (max-width: $md) {
+  .footer {
+    padding: 0 !important;
+    margin-top: -4rem;
+    .footer-flex-one,
+    .footer-flex-two {
+      padding: 1rem 2.5rem !important;
+      justify-content: flex-start !important;
+    }
+    .footer-flex-two {
+      padding-top: 2rem;
+    }
+    .links {
+      padding-left: 0;
     }
   }
 }
