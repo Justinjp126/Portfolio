@@ -478,7 +478,7 @@ body {
     color: #f2fafa;
     font-weight: $light;
     line-height: 1.6;
-    font-size: 0.85rem;
+    font-size: calc(max(0.85rem, 14px));
     max-width: 40ch;
   }
 
@@ -488,7 +488,7 @@ body {
     color: #f2fafa;
     font-weight: $light;
     line-height: 1.6;
-    font-size: 0.85rem;
+    font-size: calc(max(0.85rem, 14px));
     max-width: 40ch;
     padding-top: 0.5rem;
   }
