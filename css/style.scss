@@ -438,7 +438,7 @@ body {
   padding: 0rem 8%;
 
   .workContainer {
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
   .webmasterOneContainer {
     padding-top: 1rem;
@@ -558,8 +558,7 @@ body {
     }
   }
 }
-
-@media only screen and (max-width: $md) {
+@media only screen and (max-width: $lg) {
   .work {
     padding: 2rem 0;
     &__img {
@@ -572,7 +571,9 @@ body {
       }
     }
     .workContainer {
-      margin-bottom: 2rem;
+      width: 90%;
+      margin: 0 auto 0 auto;
+      padding-bottom: 2rem;
     }
     .workItems {
       padding: 1.5rem;
@@ -583,6 +584,14 @@ body {
     .neg-margin {
       margin-top: -2rem;
     }
+    &__paragraphR {
+      max-width: 60ch;
+    }
+
+    &__paragraphL {
+      max-width: 60ch;
+    }
+
     &__year {
       &_2018,
       &_2019,
@@ -606,7 +615,15 @@ body {
     top: -4rem !important;
   }
 }
-
+@media only screen and (max-width: $md) {
+  .work {
+    .workContainer {
+      width: 100%;
+      margin: 0 auto 0 auto;
+      padding-bottom: 2rem;
+    }
+  }
+}
 // ** Footer ** //
 .footer {
   background: rgb(23, 42, 69);
