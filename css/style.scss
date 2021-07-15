@@ -150,7 +150,7 @@ body {
 }
 // ** Navbar ** //
 .background-container {
-  height: 90vh;
+  height: calc(min(80vh, 35rem));
   background: rgb(23, 42, 69);
   background: linear-gradient(
     90deg,
@@ -331,7 +331,7 @@ body {
 
 @media only screen and (max-width: $md) {
   .background-container {
-    height: 80vh;
+    height: calc(min(80vh, 35rem));
   }
   .hero {
     margin: 2rem 0.5rem;
@@ -358,7 +358,7 @@ body {
   background-image: url(https://justinjp126.github.io/Portfolio/img/rect.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 8.5rem 15% 6rem;
+  padding: 7rem 15% 6rem;
 }
 .about {
   &__title {
@@ -493,6 +493,23 @@ body {
     padding-top: 0.5rem;
   }
 
+  .zoom {
+    height: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .zoom img {
+    transition: transform 0.5s ease;
+  }
+
+  .zoom:hover img {
+    transform: scale(1.025);
+  }
+  .margin-left {
+    margin-left: 4rem;
+  }
   &__img {
     &_nhd {
       z-index: 10;
@@ -521,7 +538,7 @@ body {
       width: 100%;
       max-width: 13rem;
       border-radius: 1rem;
-      margin-left: 4rem;
+      //margin-left: 4rem;
     }
     &_dmc {
       position: relative;
