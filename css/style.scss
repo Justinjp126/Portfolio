@@ -491,13 +491,10 @@ body {
 
   &__link {
     background: linear-gradient(to bottom, #ff5263 0%, #ff5263 100%);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
+
     background-position: 0 100%;
     background-repeat: repeat-x;
-    background-size: 3px 3px;
+    background-size: 0.1rem 0.1rem;
     color: inherit;
     text-decoration: none;
     transition: background-size 0.2s;
