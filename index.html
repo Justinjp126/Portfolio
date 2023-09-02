@@ -16,7 +16,7 @@
     rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="src/css/style.min.css" />
   <title>Home</title>
 </head>
 
@@ -71,10 +71,11 @@
                   </span>
                 </h1>
                 <p class="hero__paragraph">
-                  Hi! My name is Justin Puthenpurayil, and I'm from Pittsburgh, PA.
+                  Welcome to my portfolio.
                   I got started with computer science with web development, but
-                  I'm working to expand my skills into new parts of of the cs field,
-                  including cybersecurity and software development.
+                  I'm working to expand my skills into new parts of of the CS field,
+                  including cybersecurity and software development. I'm currently seeking an internship in a CS-related
+                  field.
                 </p>
                 <div class="hero__buttons">
                   <a class="hero__buttons_portfolio" tabindex="0" id="portfolio">Portfolio</a>
@@ -133,6 +134,50 @@
           <div class="workItems">
             <div class="row workContainer">
               <div class="
+                                            col-lg-6
+                                            d-flex
+                                            justify-content-center
+                                            align-items-center
+                                          ">
+                <a class="zoom" href="https://fantasy-nicknames.web.app/" target="_blank">
+                  <picture>
+                    <!-- <source type="image/webp" srcset="img/dmc.webp" /> -->
+                    <source type="image/jpeg" srcset="img/fantasy-crop.jpeg" />
+                    <img src="img/fantasy-crop.jpeg" alt="Fantasy Nicknames Image" class="work__img_fantasy" />
+                  </picture>
+                </a>
+              </div>
+              <div class="
+                                            col-md-12 col-lg-6
+                                            d-flex
+                                            justify-content-center
+                                            flex-column
+                                            position-relative
+                                          ">
+                <h3 class="work__subtitle">TSA Webmaster #3</h3>
+                <p class="work__paragraphR">
+                  My latest
+                  <a class="work__link" href="https://fantasy-nicknames.web.app/" target="_blank">website</a>
+                  was built with the help of Purdue LaunchPad. Purdue LaunchPad is an organization that pairs freshman
+                  with upperclassman mentors. My mentor was <a class="work__link"
+                    href="https://www.linkedin.com/in/chintansawla/" target="_blank">Chintan Sawla</a>. He helped me
+                  make a web application
+                  that assists people who play fantasy football to easily find nicknames for their teams. I used Figma,
+                  HTML, SCSS, ReactJS, Firebase
+                  Realtime Database, Vite.JS, Firebase Hosting to create and host the website. In order to webscrape the
+                  nicknames, I used a mix of
+                  Python, Selenium, and Beautiful Soup to find and insert the nicknames into the Firebase Realtime
+                  Database. The website contains more than
+                  thousand nicknames, and it's been used by hundreds of fantasy players. This website was by far my
+                  biggest project to date, and it's the part of the reason why
+                  I want to continue web development as my career.
+                </p>
+                <span class="work__year_2021" id="twenty-one">2023</span>
+              </div>
+            </div>
+
+            <div class="row workContainer">
+              <div class="
                   col-md-12 col-lg-6
                   d-flex
                   justify-content-center
@@ -155,12 +200,16 @@
                     where users could follow along easily created using several CSS Animations.
                   </p>
                 </span>
+                <span class="work__year_2022">2022</span>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 d-flex
+                                justify-content-center
+                                flex-column
+                                align-items-center">
                 <picture>
                   <source type="image/webp" srcset="img/relax.webp" />
                   <source type="image/png" srcset="img/relax.png" />
-                  <a class="zoom margin-left" href="https://justinjp126.github.io/Relaxation_Website/" target="_blank">
+                  <a class="zoom" href="https://justinjp126.github.io/Relaxation_Website/" target="_blank">
                     <img src="img/relax.png" alt="Relaxation Website" class="work__img_dmc" />
                   </a>
                 </picture>
@@ -239,11 +288,13 @@
                   </p>
                 </span>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 ">
                 <picture>
                   <source type="image/webp" srcset="img/nhmi.webp" />
                   <source type="image/png" srcset="img/nhmi.png" />
-                  <a class="zoom margin-left" href="https://www.nursinghomemaskinitiative.com" target="_blank">
+                  <a class="zoom margin-left"
+                    href="https://web.archive.org/web/20230402184346/http://nursinghomemaskinitiative.com/"
+                    target="_blank">
                     <img src="img/nhmi.png" alt="Nursing Home Mask Initiative Image" class="work__img_nhmi" />
                   </a>
                 </picture>
@@ -281,7 +332,7 @@
                     for TSA, created using HTML/CSS, placed 1st at regionals;
                     however, we could not compete at states due to COVID-19.
                     Despite this, the pandemic gave me the time to learn the
-                    fundamentals of web design, preparing for my biggest
+                    fundamentals of web design, preparing for my (then) biggest
                     project to date: The Nursing Home Mask Initiative.
                   </p>
                 </span>

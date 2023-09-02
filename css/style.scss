@@ -558,13 +558,23 @@ body {
       max-width: 23rem;
       border-radius: 1rem;
     }
+    &_fantasy {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 13rem;
+      border-radius: 0.5rem;
+      //margin-left: 4rem;
+    }
   }
 
   &__year {
     &_2018,
     &_2019,
     &_2020,
-    &_2021 {
+    &_2021,
+    &_2022,
+    &_2023 {
       position: absolute;
       transform: rotate(90deg);
       font-weight: $bold;
@@ -578,11 +588,19 @@ body {
       right: -3rem;
     }
     &_2019 {
-      left: -6rem;
+      left: -8rem;
+    }
+    &_2022 {
+      left: -8rem;
+      top: 5rem;
     }
     &_2021 {
       right: -3rem;
       top: -5%;
+    }
+    &_2023 {
+      right: -3rem;
+      top: -10rem;
     }
   }
 }
@@ -624,7 +642,8 @@ body {
       &_2018,
       &_2019,
       &_2020,
-      &_2021 {
+      &_2021,
+      &_2022 {
         position: absolute;
         transform: rotate(0deg);
         font-weight: $bold;
