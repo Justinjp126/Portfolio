@@ -450,7 +450,7 @@ body {
     font-weight: $semi-bold;
     line-height: 1;
     font-size: 2.5rem;
-    padding: 3rem 0 2rem 8%;
+    padding: 3rem 0 1rem 8%;
     &_period {
       color: #ff8b96;
     }
@@ -465,6 +465,71 @@ body {
     font-size: 1.1rem;
     &_sub {
       padding-bottom: 0.5rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 1rem 4rem;
+    &-front,
+    &-full,
+    &-system {
+      font-weight: $semi-bold;
+      letter-spacing: 0.5px;
+      border-radius: 100px;
+      display: flex;
+      align-self: center;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: transparent;
+      color: $light-blue;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 0.2rem 1.35rem;
+      transition: all 200ms ease-out;
+      margin-right: 1.5rem;
+      outline: 2px solid $light-blue;
+    }
+
+    .active {
+      background-color: $light-blue;
+      color: $dark-blue;
+      transition: all 200ms ease-in;
+    }
+
+    &-front:hover,
+    &-front:focus,
+    &-full:hover,
+    &-full:focus,
+    &-system:hover,
+    &-system:focus {
+      background-color: darken($light-blue, 10%);
+      color: darken($dark-blue, 10%);
+      transition: all 200ms ease-in;
+    }
+
+    &_resume {
+      font-weight: $semi-bold;
+      letter-spacing: 0.5px;
+      border-radius: 100px;
+      display: flex;
+      align-self: center;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: transparent;
+      color: $light-blue;
+      border: $light-blue solid 3px;
+      text-align: center;
+      font-size: 1.1rem;
+      padding: 0.05rem 1.35rem;
+      transition: background-color 200ms ease-out;
+    }
+    &_resume:hover,
+    &_resume:focus {
+      background-color: $light-blue;
+      color: $dark-blue;
+      transition: all 200ms ease-in;
     }
   }
 
