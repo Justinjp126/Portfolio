@@ -435,6 +435,10 @@ body {
 
   .workContainer {
     padding-bottom: 4rem;
+    display: none;
+  }
+  .workContainer.show {
+    display: block;
   }
   .webmasterOneContainer {
     padding-top: 1rem;
@@ -472,9 +476,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0 0 1rem 4rem;
-    &-front,
-    &-full,
-    &-system {
+    &-button {
       font-weight: $semi-bold;
       letter-spacing: 0.5px;
       border-radius: 100px;
@@ -498,12 +500,8 @@ body {
       transition: all 200ms ease-in;
     }
 
-    &-front:hover,
-    &-front:focus,
-    &-full:hover,
-    &-full:focus,
-    &-system:hover,
-    &-system:focus {
+    &-button:hover,
+    &-button:focus {
       background-color: darken($light-blue, 10%);
       color: darken($dark-blue, 10%);
       transition: all 200ms ease-in;

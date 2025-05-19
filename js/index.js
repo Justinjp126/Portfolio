@@ -1,6 +1,9 @@
 // ** Variables **//
 upBtn = $("#upBtn");
 upBtnArrow = $("#upBtnLineTwo");
+frontend = $("#frontEnd");
+fullstack = $("#fullStack");
+systems = $("#systems");
 
 // ** Functions ** //
 function scrollToElement(pageElement) {
@@ -26,6 +29,24 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
+
+$(".work__buttons-button").on("click", function () {
+  $(".work__buttons-button").removeClass("active");
+  $(this).addClass("active");
+
+  // Show projects based on the button clicked
+  let selected = $(this).attr("id");
+
+  $(".workContainer").removeClass("show");
+
+  if (selected === "frontend") {
+    $(".frontend").addClass("show");
+  } else if (selected === "fullstack") {
+    $(".fullstack").addClass("show");
+  } else if (selected === "systems") {
+    $(".systems").addClass("show");
+  }
+});
 
 // ** Use ** //
 
