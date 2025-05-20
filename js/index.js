@@ -58,8 +58,10 @@ document.getElementById("about").addEventListener("click", () => {
   scrollToElement(document.getElementById("aboutSection"));
 });
 document.getElementById("work").addEventListener("click", () => {
-  console.log("YE");
   scrollToElement(document.getElementById("workSection"));
+});
+document.getElementById("contact").addEventListener("click", () => {
+  scrollToElement(document.getElementById("contactSection"));
 });
 document.getElementById("portfolio").addEventListener("click", () => {
   scrollToElement(document.getElementById("workSection"));
