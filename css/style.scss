@@ -24,6 +24,7 @@ $max_font: 24px;
 $white: #fff;
 $off-white: #f2fafa;
 $off-white-text: #dee7e7;
+$light-grey: #dbdbdb;
 $light-blue: #a8dadc;
 $blue: #a8dadc;
 $text-blue: #326f96;
@@ -438,7 +439,7 @@ body {
     display: none;
   }
   .workContainer.show {
-    display: block;
+    display: flex;
   }
   .webmasterOneContainer {
     padding-top: 1rem;
@@ -467,9 +468,24 @@ body {
     font-weight: $semi-bold;
     line-height: 1;
     font-size: 1.1rem;
-    &_sub {
-      padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    &-year {
+      color: $off-white;
+      font-weight: $light;
+      line-height: 1;
+      font-size: 0.7rem;
+      margin: 0.1rem 0.5rem 0;
     }
+  }
+  &__techs {
+    color: $light-grey;
+    font-weight: $light;
+    line-height: 1;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
   }
 
   &__buttons {
@@ -628,42 +644,6 @@ body {
       max-width: 13rem;
       border-radius: 0.5rem;
       //margin-left: 4rem;
-    }
-  }
-
-  &__year {
-    &_2018,
-    &_2019,
-    &_2020,
-    &_2021,
-    &_2022,
-    &_2023 {
-      position: absolute;
-      transform: rotate(90deg);
-      font-weight: $bold;
-      font-size: 8rem;
-      color: rgba(#457b9d, 0.1);
-      z-index: 1;
-      letter-spacing: 1px;
-    }
-    &_2018,
-    &_2020 {
-      right: -3rem;
-    }
-    &_2019 {
-      left: -8rem;
-    }
-    &_2022 {
-      left: -8rem;
-      top: 5rem;
-    }
-    &_2021 {
-      right: -3rem;
-      top: -5%;
-    }
-    &_2023 {
-      right: -3rem;
-      top: -10rem;
     }
   }
 }

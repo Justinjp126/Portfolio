@@ -30,22 +30,26 @@ function topFunction() {
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
 
-$(".work__buttons-button").on("click", function () {
-  $(".work__buttons-button").removeClass("active");
-  $(this).addClass("active");
+$(document).ready(function () {
+  // Run filter on button click
+  $(".work__buttons-button").on("click", function () {
+    $(".work__buttons-button").removeClass("active");
+    $(this).addClass("active");
 
-  // Show projects based on the button clicked
-  let selected = $(this).attr("id");
+    let selected = $(this).attr("id");
+    $(".workContainer").removeClass("show");
 
-  $(".workContainer").removeClass("show");
+    if (selected === "frontend") {
+      $(".frontend").addClass("show");
+    } else if (selected === "fullstack") {
+      $(".fullstack").addClass("show");
+    } else if (selected === "systems") {
+      $(".systems").addClass("show");
+    }
+  });
 
-  if (selected === "frontend") {
-    $(".frontend").addClass("show");
-  } else if (selected === "fullstack") {
-    $(".fullstack").addClass("show");
-  } else if (selected === "systems") {
-    $(".systems").addClass("show");
-  }
+  // Trigger initial filtering based on any pre-selected active button
+  $(".work__buttons-button.active").trigger("click");
 });
 
 // ** Use ** //
