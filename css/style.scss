@@ -449,6 +449,7 @@ body {
   }
   .workItems {
     padding-left: 2rem;
+    margin-top: 3rem;
   }
   &__title {
     color: #f2fafa;
@@ -644,6 +645,13 @@ body {
       max-width: 13rem;
       border-radius: 0.5rem;
       //margin-left: 4rem;
+    }
+    &_bucketlist {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 13rem;
+      border-radius: 1rem;
     }
   }
 }
