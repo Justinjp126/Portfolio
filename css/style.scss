@@ -602,116 +602,64 @@ body {
     margin-left: 4rem;
   }
   &__img {
-    &_nhd {
-      z-index: 10;
-      width: 100%;
-      max-width: 20rem;
-      border-radius: 1rem;
-    }
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    border-radius: 1rem;
 
-    &_wiz {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      max-width: 20rem;
-      border-radius: 1rem;
-    }
+    &_nhd,
+    &_wiz,
     &_volta {
-      position: relative;
-      z-index: 10;
-      width: 100%;
       max-width: 20rem;
-      border-radius: 1rem;
     }
-    &_nhmi {
-      position: relative;
-      z-index: 10;
-      width: 100%;
+    &_nhmi,
+    &_fantasy,
+    &_bucketlist {
       max-width: 13rem;
-      border-radius: 1rem;
-      //margin-left: 4rem;
     }
     &_dmc {
-      position: relative;
-      z-index: 10;
-      width: 100%;
       max-width: 23rem;
-      border-radius: 1rem;
     }
     &_fantasy {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      max-width: 13rem;
       border-radius: 0.5rem;
-      //margin-left: 4rem;
-    }
-    &_bucketlist {
-      position: relative;
-      z-index: 10;
-      width: 100%;
-      max-width: 13rem;
-      border-radius: 1rem;
     }
   }
 }
 @media only screen and (max-width: $lg) {
   .work {
     padding: 2rem 0;
+    // Hide work images on non-desktop
     &__img {
       &_nhd,
       &_wiz,
       &_volta,
       &_nhmi,
       &_dmc,
-      &_fantasy {
-        display: none;
+      &_fantasy,
+      &_bucketlist {
+        display: none !important;
       }
     }
     .workContainer {
-      width: 90%;
+      width: 95%;
       margin: 0 auto 0 auto;
       padding-bottom: 2rem;
+      flex-direction: column;
     }
     .workItems {
-      padding: 1.5rem;
+      padding: 1rem;
     }
     .flex-change {
       align-items: flex-start !important;
     }
     .neg-margin {
-      margin-top: -2rem;
+      margin-top: -1rem;
     }
-    &__paragraphR {
-      max-width: 60ch;
-    }
-
+    &__paragraphR,
     &__paragraphL {
-      max-width: 60ch;
+      max-width: 100%;
+      font-size: 1rem;
     }
-
-    &__year {
-      &_2018,
-      &_2019,
-      &_2020,
-      &_2021,
-      &_2022 {
-        position: absolute;
-        transform: rotate(0deg);
-        font-weight: $bold;
-        font-size: 4.5rem;
-        color: rgba(#457b9d, 0.1);
-        z-index: 1;
-        letter-spacing: 1px;
-        top: -3rem;
-        right: 2rem !important;
-        left: unset;
-      }
-    }
-  }
-  #eighteen,
-  #twenty-one {
-    top: -4rem !important;
   }
 }
 @media only screen and (max-width: $md) {
@@ -719,7 +667,34 @@ body {
     .workContainer {
       width: 100%;
       margin: 0 auto 0 auto;
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      flex-direction: column;
+    }
+    // Hide work images on non-desktop
+    &__img {
+      &_nhd,
+      &_wiz,
+      &_volta,
+      &_nhmi,
+      &_dmc,
+      &_fantasy,
+      &_bucketlist {
+        display: none !important;
+      }
+    }
+    .workItems {
+      padding: 0.5rem;
+    }
+    .flex-change {
+      align-items: flex-start !important;
+    }
+    .neg-margin {
+      margin-top: 0;
+    }
+    &__paragraphR,
+    &__paragraphL {
+      max-width: 100%;
+      font-size: 0.95rem;
     }
   }
 }
